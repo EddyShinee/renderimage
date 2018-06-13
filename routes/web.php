@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('render', 'RenderImageController@index');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'RenderImageController@index');
