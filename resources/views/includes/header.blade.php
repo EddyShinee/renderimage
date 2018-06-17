@@ -1,22 +1,12 @@
- <!-- Navbar -->
- <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Trang chủ</a>
-      </li>
-     
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">  
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
-            class="fa fa-th-large"></i></a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+    <!-- Content Header (Page header) -->
+    <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Trang quản lý</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+              <li class="breadcrumb-item active">Quản lý version 1.0.0</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->

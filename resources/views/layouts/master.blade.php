@@ -5,16 +5,30 @@
 </header>
   <body class="hold-transition sidebar-mini">
   <div class="wrapper">
-  @include('includes.header')
+  @include('includes.navs.nav')
 
       <!-- sidebar content -->
       <div id="sidebar">
           @include('includes.sidebar.sidebar')
       </div>
 
+
+
       <!-- main content -->
       <div id="content">
-          @yield('content')
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                @include('includes.header')
+                </div>
+            </div>
+        <section class="content">
+            <div class="container-fluid">
+                @yield('content')
+            </div>
+        </section>
+        
+        </div>
       </div>
     <footer class="main-footer">
         @include('includes.footer')
