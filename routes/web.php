@@ -15,3 +15,11 @@
 //     return view('welcome');
 // });
 Route::get('/', 'RenderImageController@index');
+
+Route::get('images', 'ImageController@listImages');
+Route::get('upload', 'ImageController@upload');
+Route::post('upload', 'ImageController@uploadfile');
+
+Route::get('fonts', 'FontController@listFonts');
+Route::get('font-upload', 'FontController@upload');
+Route::post('font-upload', 'FontController@uploadfile');

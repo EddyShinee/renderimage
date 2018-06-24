@@ -34,13 +34,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="{!! Asset('images') !!}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Danh sách ảnh</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="{!! Asset('upload') !!}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Upload ảnh</p>
                 </a>
@@ -57,13 +57,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
+                <a href="{!! Asset('fonts') !!}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Danh sách Fonts</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
+                <a href="{!! Asset('font-upload') !!}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Upload Font</p>
                 </a>
