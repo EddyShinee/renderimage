@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UploadFontRequest;
 use Illuminate\Http\Request;
 use App\Font;
 
@@ -19,17 +20,18 @@ class FontController extends Controller
     public function uploadfile(UploadFontRequest $request){
         $path = public_path("uploads/fonts");
         $validated = $request->validated();
-        if($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = "Image_".$request->name."_".time().'.'.request()->image->getClientOriginalExtension();
-            $imagePath = $path. "/".  $imageName;
-            $image->move($path, $imageName);
-            $image = new Image;
-            $image->image_name = $request->name;
-            $image->image_path = '/'.$imageName;
-            $image->save();
+        if($request->hasFile('font')) {
+            $font = $request->file('font');
+            $fontName = "Font_".time().'.'.request()->font->getClientOriginalExtension();
+            $fontPath = $path. "/".  $fontName;
+            $font->move($path, $fontName);
+            $font = new Font;
+            $font->font_name = $request->name;
+            $font->temp_id =  substr(str_shuffle("abcdefghijklmnopqrstuvwxyz"), 0, 10);;
+            $font->font_path = '/'.$fontName;
+            $font->save();
         }
       return back()
-            ->with('success','Upload ảnh thành công!');
+            ->with('success','Upload font thành công!');
     }
 }

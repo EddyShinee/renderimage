@@ -21,7 +21,7 @@ class ImageController extends Controller
         $validated = $request->validated();
         if($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = "Image_".$request->name."_".time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = "Image_".time().'.'.request()->image->getClientOriginalExtension();
             $imagePath = $path. "/".  $imageName;
             $image->move($path, $imageName);
             $image = new Image;

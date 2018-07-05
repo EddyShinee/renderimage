@@ -23,3 +23,10 @@ Route::post('upload', 'ImageController@uploadfile');
 Route::get('fonts', 'FontController@listFonts');
 Route::get('font-upload', 'FontController@upload');
 Route::post('font-upload', 'FontController@uploadfile');
+
+Route::get('render', 'RenderImageController@render');
+Route::post('render', 'RenderImageController@processImage');
+
+Route::get('upload-filename', 'FileNameController@uploadFilename');
+Route::post('upload-filename', 'FileNameController@postUploadFilename');
+Route::get('list-file-name', 'FileNameController@list');

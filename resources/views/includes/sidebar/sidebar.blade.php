@@ -81,7 +81,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="{!! Asset('render') !!}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Render</p>
                 </a>
@@ -89,6 +89,32 @@
             
             </ul>
           </li>
+          <!-- Quản lý file name -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-edit"></i>
+              <p>
+                Quản lý file name
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{!! Asset('upload-filename') !!}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Upload File Name</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{!! Asset('list-file-name') !!}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Danh sách</p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
+          <!-- end Quản lý file name -->
         
         </ul>
       </nav>

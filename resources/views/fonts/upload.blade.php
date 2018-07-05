@@ -12,7 +12,7 @@
         </ul>
     </div>
 @endif
-<form action="/upload" method="post" enctype="multipart/form-data">
+<form action="/font-upload" method="post" enctype="multipart/form-data">
 <input type="hidden" name="_token" value="{{ Session::token() }}">
       <div class="form-group">
         <label for="exampleFormControlFile1">Tên file font</label>
@@ -27,17 +27,17 @@
       </div>
     </form>
     @if ($message = Session::get('success'))
-<div class="alert alert-success alert-block">
-	<button type="button" class="close" data-dismiss="alert">×</button>	
-        <strong>{{ $message }}</strong>
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>	
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
 </div>
-@endif
-</div>
-<div class="col-8 uploadform">
+<!-- <div class="col-8 uploadform">
   <h2>Xem trước font</h2>
 <div id="preview" class="preview">
 awdawdaw
-</div>
+</div> -->
 
 
 </div>
