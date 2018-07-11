@@ -28,4 +28,9 @@ class FileNameController extends Controller
       return back()
             ->with('success','Upload file thành công!');
     }
+    
+    public function filenameDelete($id) {
+        $data_delete = Filename::find($id)->delete();
+        return back()->with('success','Delete file name thành công!');
+    }
 }

@@ -34,4 +34,8 @@ class FontController extends Controller
       return back()
             ->with('success','Upload font thành công!');
     }
+    public function fontDelete($id) {
+        $data_delete = Font::find($id)->delete();
+        return back()->with('success','Delete font thành công!');
+    }
 }

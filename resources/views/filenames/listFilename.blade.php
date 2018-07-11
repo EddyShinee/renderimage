@@ -1,6 +1,12 @@
 @extends('layouts.master')
 
 @section('content')
+@if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>	
+                <strong>{{ $message }}</strong>
+        </div>
+        @endif
 <table class="table table-hover table-striped">
   <thead class="thead-dark" >
     <tr>
@@ -17,8 +23,7 @@
       <td>{{$key->file_name}}</td>
       <td>{{$key->created_at}}</td>
       <td>
-      <button type="button" class="btn btn-primary">Edit</button>
-      <button type="button" class="btn btn-danger">Delete</button>
+      <a href="{{url('/filename').'/'.$key->id.'/delete'}}"<button type="button" class="btn btn-danger">Delete</button></a>
       </td>
     </tr>
     @endforeach

@@ -32,4 +32,8 @@ class ImageController extends Controller
       return back()
             ->with('success','Upload ảnh thành công!');
     }
+    public function imageDelete($id) {
+        $data_delete = Image::find($id)->delete();
+        return back()->with('success','Delete ảnh thành công!');
+    }
 }
