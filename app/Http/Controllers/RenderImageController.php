@@ -47,7 +47,7 @@ class RenderImageController extends Controller
             for($i=0; $i<count($data_contents); $i++) {
                 
               
-            $im[$i] = imagecreatefromjpeg($image_link);
+            $im[$i] = imagecreatefrompng($image_link);
                     // Éc éc 
             // Get image dimensions
             $image_width = imagesx($im[$i]);
@@ -78,7 +78,7 @@ class RenderImageController extends Controller
                 $color['green'] = imagecolorallocate($im[$i],  $text_color1, $text_color2, $text_color3);
                 imagettftext($im[$i], $font_size, 0, $x, $y,  $color['green'], $font_link, $data_contents[$i]);
                 
-                $file[] = "covers/".time().$i.".jpg";	
+                $file[] = "covers/".time().$i.".png";	
                 imagejpeg($im[$i], $file[$i], $quality);
                 imagedestroy($im[$i]);
                 // dd($file);
