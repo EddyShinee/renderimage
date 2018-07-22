@@ -72,7 +72,7 @@ class RenderImageController extends Controller
 
                 $color['green'] = imagecolorallocate($im[$i],  $text_color1, $text_color2, $text_color3);
                 imagettftext($im[$i], $font_size, 0, $x, $y,  $color['green'], $font_link, $data_contents[$i]);
-                $file[] = "covers/".time().$i.".png";	
+                $file[] = "covers/".$data_contents[$i]."_".time().$i.".png";	
                 imagepng($im[$i], $file[$i], 0);
                 imagedestroy($im[$i]);
             }
